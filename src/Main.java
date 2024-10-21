@@ -6,10 +6,10 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Author Lermontov = new Author("Михаил","Лермонтов");
+        Author Bulgakov = new Author("Михаил","Булгаков");
         printSeparator();
-        System.out.println("Автор - " + Lermontov.getName() + " " + Lermontov.getSurname());
-        Book dogHeart = new Book("Герой нашего времени", Lermontov, 1838);
+        System.out.println("Автор - " + Bulgakov.getName() + " " + Bulgakov.getSurname());
+        Book dogHeart = new Book("Собачье сердце", Bulgakov, 1925);
         System.out.println("Название книги - " + dogHeart.getName());
         System.out.println("Год издания - " + dogHeart.getYear());
         printSeparator();
