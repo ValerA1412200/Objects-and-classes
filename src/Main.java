@@ -1,29 +1,30 @@
 public class Main {
     public static void printSeparator() {
         System.out.println("====================");
+        Author author = new Author("Михаил", "Михеев");
+        Book book = new Book("Адмирал", 2016, author);
+        System.out.println("Автор: " + book.getAuthor());
+        System.out.println("Название книги: " + book.getBook());
+        System.out.println("Год публикации : " + book.getYear());
+
+        System.out.println();
+
+        Author author1 = new Author("Михаель", "Гавен");
+        Book book2 = new Book("заговор адмирала", 2013, author1);
+        System.out.println("Автор: " + book2.getAuthor());
+        System.out.println("Название книги: " + book2.getBook());
+        System.out.println("Год публикации : " + book2.getYear());
+
+        System.out.println();
+
+        System.out.println("book2.toString() = " + book);
+        System.out.println("book2.toString() = " + book2);
+        System.out.println("book2.equals() = " + book.equals(book));
+        System.out.println("book2.equals() = " + book2.equals(book2));
+        System.out.println("Хеш код автора " + book.getAuthor() + " " + author.hashCode());
+        System.out.println("Хеш код автора " + book2.getAuthor() + " " + author1.hashCode());
+        System.out.println("Хеш код книги " + book.getBook() + " " + book.hashCode());
+        System.out.println("Хеш код книги " + book2.getBook() + " " + book2.hashCode());
     }
-
-    public static void main(String[] args) {
-
-
-        Author Lermontov = new Author("Михаил","Лермонтов");
-        printSeparator();
-        System.out.println("Автор - " + Lermontov.getName() + " " + Lermontov.getSurname());
-        Book dogHeart = new Book("Герой нашего времени", Lermontov, 1838);
-        System.out.println("Название книги - " + dogHeart.getName());
-        System.out.println("Год издания - " + dogHeart.getYear());
-        printSeparator();
-        Author Gogol = new Author("Николай","Гоголь");
-        System.out.println("Автор - " + Gogol.getName() + " " + Gogol.getSurname());
-        Book Viy = new Book("Вий",Gogol,1834);
-        System.out.println("Название книги - " + Viy.getName());
-        System.out.println("Год издания - " + Viy.getYear());
-        Viy.setYear(1835);
-        System.out.println("Год издания - " + Viy.getYear());
-        printSeparator();
-
-
-    }
-
-
 }
+
